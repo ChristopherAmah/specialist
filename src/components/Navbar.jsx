@@ -1,54 +1,174 @@
-import React from 'react';
-
-// 1. IMPORT YOUR LOGO IMAGE HERE
-import logo from '../assets/logo.jpg'; // Adjust the path as necessary
-
-const NavLink = ({ href, children }) => (
-    <li className="mx-4">
-        <a href={href} className="text-gray-600 hover:text-[#1B7FF2] transition-colors duration-300">
-            {children}
-        </a>
-    </li>
-);
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import logo from "../assets/logo.jpg"; // Adjust path if needed
 
 export default function App() {
-    return (
-        <div className="bg-white font-sans">
-            <header className="">
-                <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
-                    <a href="#" className="flex items-center">
-                        <img src={logo} alt="Specialist Hospital Logo" className="h-12 w-auto" /> 
-                    </a>
+  const [isOpen, setIsOpen] = useState(false);
 
+  return (
+    <div className="bg-white font-sans">
+      <header>
+        <nav className="container mx-auto px-10 py-4 flex justify-between items-center">
+          {/* Logo */}
+          <NavLink to="/" className="flex items-center">
+            <img
+              src={logo}
+              alt="Specialist Hospital Logo"
+              className="h-12 w-auto"
+            />
+          </NavLink>
 
-                    {/* Navigation Links */}
-                    <div className="hidden md:flex ms-auto items-center">
-                        <ul className="flex items-center space-x-4 text-[16px]">
-                           <NavLink href="/">Home</NavLink>
-                           <NavLink href="#">About</NavLink>
-                           <NavLink href="#">Blog</NavLink>
-                           <NavLink href="#">Contact Us</NavLink>
-                        </ul>
-                    </div>
+          {/* Desktop Nav */}
+          <div className="hidden md:flex ms-auto items-center">
+            <ul className="flex items-center space-x-4 text-[16px]">
+              <li>
+                <NavLink
+                  to="/"
+                  className="text-gray-600 hover:text-[#1B7FF2] transition-colors duration-300"
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/about"
+                  className="text-gray-600 hover:text-[#1B7FF2] transition-colors duration-300"
+                >
+                  About
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/blog"
+                  className="text-gray-600 hover:text-[#1B7FF2] transition-colors duration-300"
+                >
+                  Blog
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/contact"
+                  className="text-gray-600 hover:text-[#1B7FF2] transition-colors duration-300 mr-8"
+                >
+                  Contact Us
+                </NavLink>
+              </li>
+            </ul>
+          </div>
 
-                    {/* Action Button */}
-                    <a
-                        href="#"
-                        className="hidden sm:inline-block bg-[#1B7FF2] hover:bg-blue-700 text-[#F5F5F5] font-semibold py-3 px-6 rounded-[8px] transition-colors duration-300"
-                    >
-                        Book an Appointment
-                    </a>
-                    
-                    {/* Mobile Menu Button (for smaller screens) */}
-                    <div className="md:hidden">
-                        <button className="text-gray-800 hover:text-blue-600 focus:outline-none">
-                            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-                            </svg>
-                        </button>
-                    </div>
-                </nav>
-            </header>
+          {/* Action Button */}
+          <NavLink
+            to="/appointment"
+            className="hidden sm:inline-block bg-[#1B7FF2] hover:bg-blue-700 text-[#F5F5F5] font-semibold py-3 px-6 rounded-[8px] transition-colors duration-300"
+          >
+            Book an Appointment
+          </NavLink>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsOpen(true)}
+              className="text-gray-800 hover:text-blue-600 focus:outline-none"
+            >
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            </button>
+          </div>
+        </nav>
+
+        {/* Mobile Menu (Slide from Left) */}
+        <div
+          className={`fixed inset-0 z-50 bg-black bg-opacity-40 transition-opacity duration-300 ${
+            isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
+          onClick={() => setIsOpen(false)}
+        >
+          <div
+            className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ${
+              isOpen ? "translate-x-0" : "-translate-x-full"
+            }`}
+            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside menu
+          >
+            <div className="flex justify-between items-center p-4 border-b">
+              <span className="font-bold text-lg">Menu</span>
+              <button onClick={() => setIsOpen(false)}>
+                <svg
+                  className="h-6 w-6 text-gray-800"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <ul className="flex flex-col space-y-4 p-6 text-[16px]">
+              <li>
+                <NavLink
+                  to="/"
+                  onClick={() => setIsOpen(false)}
+                  className="text-gray-700 hover:text-[#1B7FF2]"
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/about"
+                  onClick={() => setIsOpen(false)}
+                  className="text-gray-700 hover:text-[#1B7FF2]"
+                >
+                  About
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/blog"
+                  onClick={() => setIsOpen(false)}
+                  className="text-gray-700 hover:text-[#1B7FF2]"
+                >
+                  Blog
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className="text-gray-700 hover:text-[#1B7FF2]"
+                >
+                  Contact Us
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/appointment"
+                  onClick={() => setIsOpen(false)}
+                  className="bg-[#1B7FF2] hover:bg-blue-700 text-white py-2 px-4 rounded-md"
+                >
+                  Book an Appointment
+                </NavLink>
+              </li>
+            </ul>
+          </div>
         </div>
-    );
+      </header>
+    </div>
+  );
 }
