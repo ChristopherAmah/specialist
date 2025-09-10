@@ -2,7 +2,7 @@ import React from 'react'
 import ContactBanner from '../components/ContactBanner'
 import ContactSection from '../components/ContactSection'
 
-const Home = () => {
+const Contact = () => {
   return (
     <>
       <ContactBanner />
@@ -11,4 +11,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Contact

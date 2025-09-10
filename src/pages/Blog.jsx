@@ -3,7 +3,7 @@ import BlogBanner from '../components/BlogBanner'
 import BlogCategory from '../components/BlogCategory'
 import BlogPosts from '../components/BlogPosts'
 
-const Home = () => {
+const Blog = () => {
   return (
     <>
       <BlogBanner />
@@ -13,4 +13,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Blog
