@@ -12,7 +12,7 @@ const Footer = () => {
     <footer className="text-white font-sans">
       {/* Appointment Banner */}
       <div className="relative bg-[#000000] w-full overflow-hidden">
-        <div className="py-3 md:px-22">
+        <div className="py-3 px-3 md:px-22">
           <div
             className="relative z-10 container mx-auto px-6 lg:px-20 py-5 flex flex-col md:flex-row items-center justify-between bg-cover bg-center"
             style={{ backgroundImage: `url(${footerbg})` }}

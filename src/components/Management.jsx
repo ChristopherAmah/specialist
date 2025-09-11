@@ -11,7 +11,7 @@ const Management = () => {
           <span className="inline-block px-4 py-1 text-[18.51px]  text-[#1B7FF2] border rounded-full mb-4">
             Management
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#121212] tracking-tight leading-tight">
+          <h2 className="text-2xl md:text-5xl font-bold text-[#121212] tracking-tight leading-tight">
             A Note from Our Medical <br />Director
           </h2>
         </div>
@@ -35,7 +35,7 @@ const Management = () => {
             </h3>
 
             {/* Social Icons */}
-            <div className="flex space-x-4 mt-2 lg:mt-0">
+            <div className="flex mx-auto space-x-4 mt-2 lg:mt-0">
                 <a
                 href="#"
                 className="text-white bg-[#1B80F3] px-1 py-1 rounded-[2.93px] transition-colors"
@@ -63,7 +63,7 @@ const Management = () => {
         </div>
 
         {/* Right Column - Text */}
-        <div className="lg:w-2/3 font-sans text-center lg:text-left border-b lg:border-b border-gray-300 pb-0 lg:pb-8">
+        <div className="lg:w-2/3 font-sans text-left lg:text-left border-b lg:border-b border-gray-300 pb-0 lg:pb-8">
             <p className="text-[20.48px] text-[#4C5B6D] leading-relaxed mb-6">
             At Model Specialist Hospital, our patients are at the heart of everything
             we do. When I first envisioned this hospital, I imagined a space where

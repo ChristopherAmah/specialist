@@ -9,7 +9,7 @@ const ContactUsBanner = () => {
       <div className="absolute inset-0 bg-[#00000066] opacity-60"></div>
 
       {/* Title */}
-      <h1 className="relative z-10 text-white text-5xl md:text-6xl font-medium font-sans tracking-tight">
+      <h1 className="relative z-10 text-white text-5xl md:text-6xl text-center font-medium font-sans tracking-tight px-8">
         About Model Specialist Hospital
       </h1>
     </div>

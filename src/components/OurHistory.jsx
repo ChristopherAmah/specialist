@@ -10,13 +10,13 @@ const OurHistory = () => {
           <span className="inline-block px-4 py-1 text-[14.75px] text-[#1B7FF2] border rounded-full mb-4">
             Our History
           </span>
-          <h2 className="text-4xl font-medium text-[#000000] leading-tight">
+          <h2 className="text-2xl font-medium text-[#000000] leading-tight">
             A Legacy of Excellence In Healthcare
           </h2>
         </div>
         
         {/* Right Content Section */}
-        <div className="lg:w-3/5 text-center lg:text-left">
+        <div className="lg:w-3/5 text-left lg:text-left">
           <p className="text-md text-[#5E5E5E] leading-relaxed mb-6">
             Model Specialist Hospital, located at 5 Tafawa Balewa Crescent, Surulere, Lagos, was founded in 2002 with a clear purpose — to provide accessible, high-quality medical care to individuals and families within our community.
           </p>
