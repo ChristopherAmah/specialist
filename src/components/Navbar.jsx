@@ -1,9 +1,11 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import logo from "../assets/logo.jpg"; // Adjust path if needed
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import logo from '../assets/logo.jpg';
+import { useModal } from './ModalContext';
 
-export default function App() {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { openModal } = useModal();
 
   return (
     <div className="bg-white font-sans">
@@ -11,11 +13,7 @@ export default function App() {
         <nav className="container mx-auto px-10 py-4 flex justify-between items-center">
           {/* Logo */}
           <NavLink to="/" className="flex items-center">
-            <img
-              src={logo}
-              alt="Specialist Hospital Logo"
-              className="h-12 w-auto"
-            />
+            <img src={logo} alt="Specialist Hospital Logo" className="h-12 w-auto" />
           </NavLink>
 
           {/* Desktop Nav */}
@@ -56,13 +54,13 @@ export default function App() {
             </ul>
           </div>
 
-          {/* Action Button */}
-          <NavLink
-            to="/appointment"
+          {/* Desktop Action Button */}
+          <button
+            onClick={openModal}
             className="hidden sm:inline-block bg-[#1B7FF2] hover:bg-blue-700 text-[#F5F5F5] font-semibold py-3 px-6 rounded-[8px] transition-colors duration-300"
           >
             Book an Appointment
-          </NavLink>
+          </button>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
@@ -70,12 +68,7 @@ export default function App() {
               onClick={() => setIsOpen(true)}
               className="text-gray-800 hover:text-blue-600 focus:outline-none"
             >
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -90,15 +83,15 @@ export default function App() {
         {/* Mobile Menu (Slide from Left) */}
         <div
           className={`fixed inset-0 z-50 bg-black bg-opacity-40 transition-opacity duration-300 ${
-            isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+            isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
           }`}
           onClick={() => setIsOpen(false)}
         >
           <div
             className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ${
-              isOpen ? "translate-x-0" : "-translate-x-full"
+              isOpen ? 'translate-x-0' : '-translate-x-full'
             }`}
-            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside menu
+            onClick={(e) => e.stopPropagation()}
           >
             <div className="flex justify-between items-center p-4 border-b">
               <span className="font-bold text-lg">Menu</span>
@@ -157,13 +150,15 @@ export default function App() {
                 </NavLink>
               </li>
               <li>
-                <NavLink
-                  to="/appointment"
-                  onClick={() => setIsOpen(false)}
-                  className="bg-[#1B7FF2] hover:bg-blue-700 text-white py-2 px-4 rounded-md"
+                <button
+                  onClick={() => {
+                    setIsOpen(false);
+                    openModal();
+                  }}
+                  className="bg-[#1B7FF2] hover:bg-blue-700 text-[#F5F5F5] font-semibold py-4 px-4 rounded-[8px] transition-colors duration-300 w-full text-left"
                 >
                   Book an Appointment
-                </NavLink>
+                </button>
               </li>
             </ul>
           </div>

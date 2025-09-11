@@ -40,14 +40,14 @@ const TestimonialSection = () => {
   ];
 
   return (
-    <section className="bg-white p-8 px-20 font-sans">
+    <section className="bg-white p-8 md:px-20 font-sans">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
           <span className="inline-block px-4 py-1 text-[18.51px] text-[#1B7FF2] bg-white border rounded-full mb-4">
             Testimonials
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-[#121212] tracking-tight leading-tight">
-            What Our Patient Say<br />About Us
+            What Our Patient Say<br className="hidden"/> About Us
           </h2>
           <p className="font-sans text-[16px] text-[#2E2E27] max-w-2xl mx-auto mt-4">
             Hear from patients who have experienced our care firsthand.

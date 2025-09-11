@@ -42,7 +42,7 @@ const App = () => {
   ];
 
   return (
-    <div className="bg-white min-h-screen p-8 px-10 font-sans">
+    <div className="bg-white min-h-screen py-8 px-4 md:px-10 font-sans">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
           <span className="inline-block px-4 py-1 text-[14.75px] text-[#1B7FF2] bg-white border-[1.05px] border-indigo-600 rounded-full mb-8">
@@ -56,7 +56,7 @@ const App = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-10 lg:px-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-10 lg:px-20">
           {services.map((service, index) => (
             <div key={index} className="transition-transform transform hover:scale-105">
               <div className="flex bg-[#F2F7FFD6] justify-center mb-6">

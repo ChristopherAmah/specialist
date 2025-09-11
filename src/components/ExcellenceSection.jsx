@@ -18,7 +18,7 @@ const App = () => {
   ];
 
   return (
-    <div className="bg-white py-16 px-4 font-sans text-gray-900">
+    <div className="bg-white py-16 px-8 font-sans text-gray-900">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-[48px] text-[#192431] tracking-tight leading-tight">
@@ -26,7 +26,7 @@ const App = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center px-4 md:px-12">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center md:px-12">
           {stats.map((stat, index) => (
             <div
               key={index}

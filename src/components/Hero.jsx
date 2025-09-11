@@ -12,14 +12,14 @@ const Hero = () => {
       >
         {/* Content Wrapper */}
         <div className="relative z-10 flex items-center min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-[90vh] font-sans">
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="w-full max-w-7xl mx-auto px-8 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-10 items-center">
               {/* Left Column: Text */}
-              <div className="text-center md:text-left">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-[#121212] leading-tight mb-4">
+              <div className="text-left md:text-left">
+                <h1 className="text-5xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-bold md:font-semibold text-[#121212] leading-tight mb-4">
                   Model Specialist Hospital
                 </h1>
-                <p className="text-sm sm:text-base md:text-lg text-[#383C59] max-w-lg mx-auto md:mx-0 mb-6">
+                <p className="text-sm font-semibold sm:text-base md:text-lg md:text-[#383C59] md:max-w-lg mx-auto md:mx-0 mb-6">
                   Model Specialist Hospital provides exceptional healthcare with a
                   patient-centered approach. Our team of specialists is dedicated
                   to delivering compassionate care using the latest medical
