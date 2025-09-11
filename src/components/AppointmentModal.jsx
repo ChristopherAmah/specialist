@@ -1,6 +1,6 @@
 import React from 'react';
 import { useModal } from './ModalContext';
-
+import logo from '../assets/logo.jpg';
 const AppointmentModal = () => {
   const { isModalOpen, closeModal } = useModal();
 
@@ -8,38 +8,36 @@ const AppointmentModal = () => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4">
-      <div className="bg-white rounded-lg shadow-lg w-full max-w-md max-h-screen flex flex-col relative">
+      <div className="bg-white rounded-[4px] shadow-lg w-full max-w-md max-h-[90vh] flex flex-col relative">
         {/* Close Button */}
         <button
           onClick={closeModal}
-          className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
+          className="absolute top-3 right-3 text-[#626262] hover:text-gray-700"
         >
           ✕
         </button>
 
-        {/* Modal Header */}
-        <div className="p-6 border-b">
-          <h2 className="text-2xl font-bold text-gray-800 mb-1 text-center">
-            Book An Appointment
-          </h2>
-          <p className="text-gray-600 text-sm text-center">
-            Fill in your details below to schedule a consultation. We'll confirm shortly.
+        {/* Modal Header with Logo */}
+        <div className="p-6 text-center border-b border-gray-200">
+          <img src={logo} alt="Model Specialist Hospital Logo" className="mx-auto w-[81.68px] h-[57.11px] mb-2" />
+          <h2 className="text-[26px] text-[#313131]">Book An Appointment</h2>
+          <p className="text-[#666666] text-[12px]">
+            Fill in your details below to schedule a consultation with the doctor. We'll confirm your appointment shortly.
           </p>
         </div>
 
         {/* Modal Form */}
         <div className="p-6 overflow-y-auto flex-1">
           <form
-            className="space-y-6"
+            className="space-y-4"
             onSubmit={(e) => {
               e.preventDefault();
-              // Add form submission logic here (e.g., API call)
               console.log('Form submitted');
               closeModal();
             }}
           >
             <div>
-              <label htmlFor="fullName" className="block text-gray-700 font-medium mb-1">
+              <label htmlFor="fullName" className="block text-[#313131] text-[16px] mb-1">
                 Full Name
               </label>
               <input
@@ -47,12 +45,12 @@ const AppointmentModal = () => {
                 id="fullName"
                 name="fullName"
                 placeholder="Enter your full name"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500"
+                className="w-full px-3 py-2 border border-[#C0D5DE] rounded-[6px] text-gray-700 placeholder-[#939393] focus:outline-none focus:border-[#1B7FF2]"
                 required
               />
             </div>
             <div>
-              <label htmlFor="phoneNumber" className="block text-gray-700 font-medium mb-1">
+              <label htmlFor="phoneNumber" className="block text-[#313131] text-[16px] mb-1">
                 Phone Number
               </label>
               <input
@@ -60,37 +58,37 @@ const AppointmentModal = () => {
                 id="phoneNumber"
                 name="phoneNumber"
                 placeholder="Enter your phone number"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500"
+                className="w-full px-3 py-2 border border-[#C0D5DE] rounded-[6px] text-gray-700 placeholder-[#939393] focus:outline-none focus:border-[#1B7FF2]"
                 required
               />
             </div>
             <div>
-              <label htmlFor="appointmentTime" className="block text-gray-700 font-medium mb-1">
+              <label htmlFor="appointmentTime" className="block text-[#313131] text-[16px] mb-1">
                 Appointment Date & Time
               </label>
               <input
                 type="datetime-local"
                 id="appointmentTime"
                 name="appointmentTime"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500"
+                className="w-full px-3 py-2 border border-[#C0D5DE] rounded-[6px] text-gray-700 placeholder-[#939393] focus:outline-none focus:border-[#1B7FF2]"
                 required
               />
             </div>
             <div>
-              <label htmlFor="comments" className="block text-gray-700 font-medium mb-1">
+              <label htmlFor="comments" className="block text-[#313131] text-[16px] mb-1">
                 Comments
               </label>
               <textarea
                 id="comments"
                 name="comments"
                 rows="4"
-                placeholder="Leave a note (symptoms, requests, etc.)"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500"
+                placeholder="Leave a note for the doctor (symptoms/requests, etc.)"
+                className="w-full px-3 py-2 border border-[#C0D5DE] rounded-[6px] text-gray-700 placeholder-[#939393] focus:outline-none focus:border-[#1B7FF2]"
               ></textarea>
             </div>
             <button
               type="submit"
-              className="w-full py-3 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-600 transition-colors"
+              className="w-full py-2 bg-[#1B7FF2] text-white font-semibold rounded-[8px] hover:bg-blue-700 transition-colors"
             >
               Submit
             </button>
