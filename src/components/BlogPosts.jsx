@@ -75,7 +75,7 @@ const LatestBlogPosts = () => {
               <img
                 src={post.image}
                 alt={post.title}
-                className="w-full h-56 object-cover border-[00000033] bg-white rounded-2xl"
+                className="w-full h-56 object-cover border-[#00000033] rounded-2xl"
               />
               <div className="p-6">
                 <span className="inline-block bg-[#EAEAEA] text-[#222222] text-xs px-3 py-1 rounded-full mb-3">
