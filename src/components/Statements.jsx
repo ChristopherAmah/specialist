@@ -2,7 +2,7 @@ import React from 'react';
 import rocket from '../assets/rocket.png';
 import eyes from '../assets/eyes.jpg';
 import puzzle from '../assets/puzzle.jpg';
-import icon1 from '../assets/icon.png';
+import icon1 from '../assets/icon1.png';
 
 const VisionAndMission = () => {
   return (
