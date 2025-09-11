@@ -62,7 +62,7 @@ const TestimonialSection = () => {
               className="bg-[#EDF5FE] p-8 rounded-3xl shadow-md w-full md:w-1/2 flex-shrink-0 relative overflow-hidden"
             >
               {/* Quote watermark */}
-              <div className="absolute bottom-4 right-4 text-[#1B80F3] text-[120px] pointer-events-none z-10">
+              <div className="absolute bottom-4 right-4 text-[#1B80F3]/50 text-[120px] pointer-events-none z-1">
                 <BiSolidQuoteAltLeft />
               </div>
 

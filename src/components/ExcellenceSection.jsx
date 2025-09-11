@@ -26,7 +26,7 @@ const App = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center md:px-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center md:px-12">
           {stats.map((stat, index) => (
             <div
               key={index}

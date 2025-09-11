@@ -12,7 +12,7 @@ const Hero = () => {
       >
         {/* Content Wrapper */}
         <div className="relative z-10 flex items-center min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-[90vh] font-sans">
-          <div className="w-full max-w-7xl mx-auto px-8 sm:px-6 lg:px-8">
+          <div className="w-full max-w-7xl mx-auto px-8 py-8 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-10 items-center">
               {/* Left Column: Text */}
               <div className="text-left md:text-left">
