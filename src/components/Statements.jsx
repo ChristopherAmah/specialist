@@ -2,7 +2,6 @@ import React from 'react';
 import rocket from '../assets/rocket.png';
 import eyes from '../assets/eyes.jpg';
 import puzzle from '../assets/puzzle.jpg';
-import icon1 from '../assets/icon1.png';
 
 const VisionAndMission = () => {
   return (
@@ -12,7 +11,7 @@ const VisionAndMission = () => {
         {/* Top Left - Vision Statement */}
         <div className="flex flex-col p-6 rounded-lg">
           <div className="flex flex-col items-start mb-4">
-            <img src={icon1} alt="" className="w-[40px] h-[40px] mb-2" />
+            <img src={rocket} alt="" className="w-[40px] h-[40px] mb-2" />
             <span className="text-[36px] text-white">Vision Statement</span>
           </div>
           <p className="text-[#E4EAFF] text-[20px] font-medium leading-relaxed">
