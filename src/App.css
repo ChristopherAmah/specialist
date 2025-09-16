@@ -30,6 +30,6 @@
 /* Optional: Adjust scroll speed for smaller screens */
 @media (max-width: 768px) {
   .scroll-track {
-    animation: scroll 30s linear infinite; /* slower on mobile */
+    animation: scroll 20s linear infinite; /* slower on mobile */
   }
 }
