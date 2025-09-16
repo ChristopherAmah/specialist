@@ -54,18 +54,18 @@ Thank you.`;
         {/* Info Cards Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12 px-2 sm:px-6 lg:px-20">
           {/* Address Card */}
-          <div className="bg-[#000000] text-white p-6 sm:p-8 rounded-[14px] flex flex-col items-center justify-center text-center">
-            <SlLocationPin className="w-10 h-10 mb-4" />
-            <h3 className="text-lg sm:text-xl md:text-2xl font-medium mb-2">
+          <div className="bg-[#EDEDED] p-6 sm:p-8 rounded-[14px] flex flex-col items-center justify-center text-center hover:bg-black">
+            <SlLocationPin className="w-10 h-10 mb-4 text-[#8C8C8C]" />
+            <h3 className="text-lg sm:text-xl md:text-2xl font-medium mb-2 text-[#8C8C8C]">
               Address
             </h3>
-            <p className="text-sm sm:text-base md:text-[15.75px] font-medium">
-              5 Taiwo Balewa Crescent, Off Adeniran Ogunsanya, Surulere, Lagos.
+            <p className="text-sm sm:text-base md:text-[15.75px] font-medium text-[#8C8C8C]">
+              5 Tafawa Balewa Crescent, Off Adeniran Ogunsanya, Surulere, Lagos.
             </p>
           </div>
 
           {/* Contact Card */}
-          <div className="bg-[#EDEDED] p-6 sm:p-8 rounded-[14px] flex flex-col items-center justify-center text-center">
+          <div className="bg-[#EDEDED] p-6 sm:p-8 rounded-[14px] flex flex-col items-center justify-center text-center hover:bg-black">
             <FaPhoneAlt className="w-10 h-10 mb-4 text-[#8C8C8C]" />
             <h3 className="text-lg sm:text-xl md:text-2xl font-medium text-[#8C8C8C] mb-2">
               Contact
@@ -76,7 +76,7 @@ Thank you.`;
           </div>
 
           {/* Email Card */}
-          <div className="bg-[#EDEDED] p-6 sm:p-8 rounded-[14px] flex flex-col items-center justify-center text-center">
+          <div className="bg-[#EDEDED] p-6 sm:p-8 rounded-[14px] flex flex-col items-center justify-center text-center hover:bg-black">
             <FaEnvelope className="w-10 h-10 mb-4 text-[#8C8C8C]" />
             <h3 className="text-lg sm:text-xl md:text-2xl font-medium text-[#8C8C8C] mb-2">
               Email

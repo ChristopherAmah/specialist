@@ -9,19 +9,8 @@ import greenbay from "../assets/greenbay.png";
 import axa from "../assets/axa.png";
 
 const Hero = () => {
-  // Duplicate icons for seamless infinite scroll
-  const icons = [
-    reliance,
-    novo,
-    total,
-    greenbay,
-    axa,
-    reliance,
-    novo,
-    total,
-    greenbay,
-    axa,
-  ];
+  // Base icon set
+  const icons = [reliance, novo, total, greenbay, axa];
 
   return (
     <section className="w-full">
@@ -62,7 +51,7 @@ const Hero = () => {
       {/* Bottom Scrolling Icons */}
       <div className="infinite-scroll">
         <div className="scroll-track">
-          {icons.map((icon, idx) => (
+          {[...icons, ...icons].map((icon, idx) => (
             <img
               key={idx}
               src={icon}
