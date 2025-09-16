@@ -1,8 +1,28 @@
 import React from "react";
-import hero from "../assets/hero.jpg"; // Background image
-import banner from "../assets/banner.jpg"; // Bottom banner
+import hero from "../assets/hero.jpg";
+
+// Example icons (replace with your own images)
+import reliance from "../assets/reliance.png";
+import novo from "../assets/novo.png";
+import total from "../assets/total.png";
+import greenbay from "../assets/greenbay.png";
+import axa from "../assets/axa.png";
 
 const Hero = () => {
+  // Duplicate icons for seamless infinite scroll
+  const icons = [
+    reliance,
+    novo,
+    total,
+    greenbay,
+    axa,
+    reliance,
+    novo,
+    total,
+    greenbay,
+    axa,
+  ];
+
   return (
     <section className="w-full">
       {/* Hero Section */}
@@ -10,7 +30,6 @@ const Hero = () => {
         className="relative w-full bg-cover bg-center overflow-hidden"
         style={{ backgroundImage: `url(${hero})` }}
       >
-        {/* Content Wrapper */}
         <div className="relative z-10 flex items-center min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-[90vh] font-sans">
           <div className="w-full max-w-7xl mx-auto px-8 py-8 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-10 items-center">
@@ -33,22 +52,25 @@ const Hero = () => {
                 </a>
               </div>
 
-              {/* Right Column: Side Image Placeholder */}
-              <div className="hidden md:flex justify-center items-center h-full">
-                {/* Add optional illustration or doctor image here */}
-              </div>
+              {/* Right Column: Placeholder */}
+              <div className="hidden md:flex justify-center items-center h-full"></div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Bottom Banner */}
-      <div className="w-full">
-        <img
-          src={banner}
-          alt="Hospital Banner"
-          className="w-full h-20 sm:h-28 md:h-32 lg:h-40 object-cover"
-        />
+      {/* Bottom Scrolling Icons */}
+      <div className="infinite-scroll">
+        <div className="scroll-track">
+          {icons.map((icon, idx) => (
+            <img
+              key={idx}
+              src={icon}
+              alt={`icon-${idx}`}
+              className="scroll-icon"
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

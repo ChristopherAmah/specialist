@@ -85,10 +85,10 @@ const Footer = () => {
             <ul className="space-y-6 text-[14px] text-[#A5A5A5]">
               <li className="flex items-start space-x-3">
                 <FaLocationDot className="text-white w-5 h-5" />
-                <span>5, Taiwo Balewa Crescent, Off Adeniran Ogunsanya, Surulere.</span>
+                <span>5, Tafawa Balewa Crescent, off Adeniran Ogunsanya, Surulere, Lagos.</span>
               </li>
               <li className="flex items-center space-x-3">
-                📞 <span>09023141562</span>
+                📞 <span>08023141562</span>
               </li>
               <li className="flex items-center space-x-3">
                 ✉️ <span>Modelspecialist@gmail.com</span>

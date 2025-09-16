@@ -1,10 +1,10 @@
 import React from 'react';
-import blogbanner from '../assets/blogbanner.jpg'; // Adjust path if needed
+import aboutbanner from '../assets/aboutbanner.jpg'; // Adjust path if needed
 
 const ContactUsBanner = () => {
   return (
     <div className="relative w-full h-80 flex bg-cover bg-center items-center justify-center overflow-hidden" style={{
-          backgroundImage: `url(${blogbanner})`,
+          backgroundImage: `url(${aboutbanner})`,
         }}>
       <div className="absolute inset-0 bg-[#00000066] opacity-60"></div>
 

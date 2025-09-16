@@ -1,0 +1,49 @@
+/* Infinite scroll container */
+.infinite-scroll {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: #ffffff;
+  padding: 15px 0;
+}
+
+/* Track that scrolls left infinitely */
+.scroll-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 25s linear infinite;
+}
+
+/* Each icon */
+.scroll-icon {
+  height: 40px;        /* default for mobile */
+  margin: 0 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+  .scroll-icon {
+    height: 60px;
+    margin: 0 30px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .scroll-icon {
+    height: 80px;
+    margin: 0 40px;
+  }
+}
+
+/* Keyframes for smooth infinite scroll */
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

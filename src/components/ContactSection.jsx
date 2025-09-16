@@ -1,5 +1,6 @@
 import React from "react";
 import { SlLocationPin } from "react-icons/sl";
+import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const ContactUsSection = () => {
   const handleSubmit = (e) => {
@@ -65,7 +66,7 @@ Thank you.`;
 
           {/* Contact Card */}
           <div className="bg-[#EDEDED] p-6 sm:p-8 rounded-[14px] flex flex-col items-center justify-center text-center">
-            <SlLocationPin className="w-10 h-10 text-[#8C8C8C] mb-4" />
+            <FaPhoneAlt className="w-10 h-10 mb-4 text-[#8C8C8C]" />
             <h3 className="text-lg sm:text-xl md:text-2xl font-medium text-[#8C8C8C] mb-2">
               Contact
             </h3>
@@ -74,81 +75,82 @@ Thank you.`;
             </p>
           </div>
 
-          {/* Social Media Card */}
+          {/* Email Card */}
           <div className="bg-[#EDEDED] p-6 sm:p-8 rounded-[14px] flex flex-col items-center justify-center text-center">
-            <SlLocationPin className="w-10 h-10 text-[#8C8C8C] mb-4" />
+            <FaEnvelope className="w-10 h-10 mb-4 text-[#8C8C8C]" />
             <h3 className="text-lg sm:text-xl md:text-2xl font-medium text-[#8C8C8C] mb-2">
-              Social Media
+              Email
             </h3>
             <p className="text-sm sm:text-base md:text-[15.75px] font-medium text-[#8C8C8C]">
-              Links
+              Modelspecialist@gmail.com
             </p>
           </div>
         </div>
 
         {/* Map & Form Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-stretch lg:px-20">
-          {/* Map */}
-          <div className="w-full h-72 sm:h-80 md:h-auto md:min-h-[500px] overflow-hidden">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4447385934526!2d3.354181814770114!3d6.529068025514691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8cc7e0255b89%3A0x67a9a14c69335a1b!2s5%20Taiwo%20Balewa%20Cres%2C%20Surulere%2C%20Lagos!5e0!3m2!1sen!2sng!4v1628109670742!5m2!1sen!2sng"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
+  {/* Map */}
+  <div className="w-full h-72 sm:h-80 md:h-auto md:min-h-[500px] overflow-hidden">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4384973931994!2d3.353362474817388!3d6.529798493467456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8cc5e697b56b%3A0x96c1f2f4f9c0b6c4!2s5%20Tafawa%20Balewa%20Crescent%2C%20off%20Adeniran%20Ogunsanya%2C%20Surulere%2C%20Lagos!5e0!3m2!1sen!2sng!4v1726480162971!5m2!1sen!2sng"
+      width="100%"
+      height="100%"
+      style={{ border: 0 }}
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
 
-          {/* Contact Form */}
-          <div className="w-full flex flex-col justify-center">
-            <h3 className="text-xl sm:text-2xl md:text-[24px] font-semibold text-[#000000B2] mb-6">
-              Send us a Message
-            </h3>
-            <form className="space-y-5 sm:space-y-6" onSubmit={handleSubmit}>
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                required
-                className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                required
-                className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
-              />
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone Number*"
-                className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
-              />
-              <input
-                type="text"
-                name="description"
-                placeholder="Description"
-                className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
-              />
-              <textarea
-                name="message"
-                rows="4"
-                placeholder="Message"
-                required
-                className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none text-sm sm:text-base"
-              ></textarea>
-              <button
-                type="submit"
-                className="w-full px-6 py-3 bg-blue-500 text-white rounded-lg font-semibold text-base sm:text-lg hover:bg-blue-600 transition-colors"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
-        </div>
+  {/* Contact Form */}
+  <div className="w-full flex flex-col justify-center">
+    <h3 className="text-xl sm:text-2xl md:text-[24px] font-semibold text-[#000000B2] mb-6">
+      Send us a Message
+    </h3>
+    <form className="space-y-5 sm:space-y-6" onSubmit={handleSubmit}>
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required
+        className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        required
+        className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
+      />
+      <input
+        type="tel"
+        name="phone"
+        placeholder="Phone Number*"
+        className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
+      />
+      <input
+        type="text"
+        name="description"
+        placeholder="Description"
+        className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
+      />
+      <textarea
+        name="message"
+        rows="4"
+        placeholder="Message"
+        required
+        className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none text-sm sm:text-base"
+      ></textarea>
+      <button
+        type="submit"
+        className="w-full px-6 py-3 bg-blue-500 text-white rounded-lg font-semibold text-base sm:text-lg hover:bg-blue-600 transition-colors"
+      >
+        Send Message
+      </button>
+    </form>
+  </div>
+      </div>
+
       </div>
     </section>
   );

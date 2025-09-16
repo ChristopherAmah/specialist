@@ -9,7 +9,7 @@ const VisionAndMission = () => {
       <div className="container mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-8 py-16 px-4 md:px-16">
         
         {/* Top Left - Vision Statement */}
-        <div className="flex flex-col p-6 rounded-lg">
+        <div className="flex flex-col p-6 rounded-lg order-1">
           <div className="flex flex-col items-start mb-4">
             <img src={rocket} alt="" className="w-[40px] h-[40px] mb-2" />
             <span className="text-[36px] text-white">Vision Statement</span>
@@ -19,8 +19,8 @@ const VisionAndMission = () => {
           </p>
         </div>
 
-        {/* Top Right - Image */}
-        <div className="rounded-lg overflow-hidden">
+        {/* Top Right - Vision Image */}
+        <div className="rounded-lg overflow-hidden order-2">
           <img 
             src={eyes} 
             alt="Close up of a person's eye" 
@@ -28,17 +28,8 @@ const VisionAndMission = () => {
           />
         </div>
 
-        {/* Bottom Left - Image */}
-        <div className="rounded-lg overflow-hidden">
-          <img 
-            src={puzzle}
-            alt="Hands putting together a puzzle" 
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        {/* Bottom Right - Mission Statement */}
-        <div className="flex flex-col p-6 rounded-lg">
+        {/* Bottom Left - Mission Statement */}
+        <div className="flex flex-col p-6 rounded-lg order-3 lg:order-4">
           <div className="flex flex-col items-start mb-4">
             <img src={rocket} alt="" className="w-[40px] h-[40px] mb-2" />
             <span className="text-[36px] text-white">Mission Statement</span>
@@ -48,6 +39,15 @@ const VisionAndMission = () => {
             <li>To maintain high clinical standards while fostering a welcoming, respectful environment for all.</li>
             <li>To continue evolving through medical advancement and staff training, ensuring that every patient receives care that meets international best practices.</li>
           </ul>
+        </div>
+
+        {/* Bottom Right - Mission Image */}
+        <div className="rounded-lg overflow-hidden order-4 lg:order-3">
+          <img 
+            src={puzzle}
+            alt="Hands putting together a puzzle" 
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
     </div>
