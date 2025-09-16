@@ -1,10 +1,40 @@
 import React from 'react';
 import { useModal } from './ModalContext';
 import logo from '../assets/logo.jpg';
+
 const AppointmentModal = () => {
   const { isModalOpen, closeModal } = useModal();
 
   if (!isModalOpen) return null;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const fullName = form.fullName.value;
+    const phoneNumber = form.phoneNumber.value;
+    const appointmentTime = form.appointmentTime.value;
+    const comments = form.comments.value;
+
+    const subject = `Appointment Request from ${fullName}`;
+    const body = `Hello,
+
+I would like to book an appointment.
+
+Full Name: ${fullName}
+Phone Number: ${phoneNumber}
+Appointment Date & Time: ${appointmentTime}
+Comments: ${comments}
+
+Thank you.`;
+
+    // Replace with your actual email address
+    window.location.href = `mailto:christopheramah0@gmail.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+
+    closeModal();
+  };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4">
@@ -19,7 +49,11 @@ const AppointmentModal = () => {
 
         {/* Modal Header with Logo */}
         <div className="p-6 text-center border-b border-gray-200">
-          <img src={logo} alt="Model Specialist Hospital Logo" className="mx-auto w-[81.68px] h-[57.11px] mb-2" />
+          <img
+            src={logo}
+            alt="Model Specialist Hospital Logo"
+            className="mx-auto w-[81.68px] h-[57.11px] mb-2"
+          />
           <h2 className="text-[26px] text-[#313131]">Book An Appointment</h2>
           <p className="text-[#666666] text-[12px]">
             Fill in your details below to schedule a consultation with the doctor. We'll confirm your appointment shortly.
@@ -28,16 +62,12 @@ const AppointmentModal = () => {
 
         {/* Modal Form */}
         <div className="p-6 overflow-y-auto flex-1">
-          <form
-            className="space-y-4"
-            onSubmit={(e) => {
-              e.preventDefault();
-              console.log('Form submitted');
-              closeModal();
-            }}
-          >
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="fullName" className="block text-[#313131] text-[16px] mb-1">
+              <label
+                htmlFor="fullName"
+                className="block text-[#313131] text-[16px] mb-1"
+              >
                 Full Name
               </label>
               <input
@@ -50,7 +80,10 @@ const AppointmentModal = () => {
               />
             </div>
             <div>
-              <label htmlFor="phoneNumber" className="block text-[#313131] text-[16px] mb-1">
+              <label
+                htmlFor="phoneNumber"
+                className="block text-[#313131] text-[16px] mb-1"
+              >
                 Phone Number
               </label>
               <input
@@ -63,7 +96,10 @@ const AppointmentModal = () => {
               />
             </div>
             <div>
-              <label htmlFor="appointmentTime" className="block text-[#313131] text-[16px] mb-1">
+              <label
+                htmlFor="appointmentTime"
+                className="block text-[#313131] text-[16px] mb-1"
+              >
                 Appointment Date & Time
               </label>
               <input
@@ -75,7 +111,10 @@ const AppointmentModal = () => {
               />
             </div>
             <div>
-              <label htmlFor="comments" className="block text-[#313131] text-[16px] mb-1">
+              <label
+                htmlFor="comments"
+                className="block text-[#313131] text-[16px] mb-1"
+              >
                 Comments
               </label>
               <textarea

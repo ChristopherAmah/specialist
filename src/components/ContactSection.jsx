@@ -2,6 +2,37 @@ import React from "react";
 import { SlLocationPin } from "react-icons/sl";
 
 const ContactUsSection = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const phone = form.phone.value;
+    const description = form.description.value;
+    const message = form.message.value;
+
+    const subject = `New Contact Message from ${name}`;
+    const body = `Hello,
+
+You have a new message from your website contact form.
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Description: ${description}
+
+Message:
+${message}
+
+Thank you.`;
+
+    // Change this to your email address
+    window.location.href = `mailto:your-email@example.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+  };
+
   return (
     <section className="bg-white py-12 sm:py-16 px-4 font-sans">
       <div className="container mx-auto max-w-7xl">
@@ -75,17 +106,19 @@ const ContactUsSection = () => {
             <h3 className="text-xl sm:text-2xl md:text-[24px] font-semibold text-[#000000B2] mb-6">
               Send us a Message
             </h3>
-            <form className="space-y-5 sm:space-y-6">
+            <form className="space-y-5 sm:space-y-6" onSubmit={handleSubmit}>
               <input
                 type="text"
                 name="name"
                 placeholder="Your Name"
+                required
                 className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
               />
               <input
                 type="email"
                 name="email"
                 placeholder="Email"
+                required
                 className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
               />
               <input
@@ -104,6 +137,7 @@ const ContactUsSection = () => {
                 name="message"
                 rows="4"
                 placeholder="Message"
+                required
                 className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none text-sm sm:text-base"
               ></textarea>
               <button
