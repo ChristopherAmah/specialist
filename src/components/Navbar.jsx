@@ -94,7 +94,7 @@ export default function Navbar() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex justify-between items-center p-4 border-b">
-              <span className="font-bold text-lg">Menu</span>
+              <span className="font-bold text-lg"><img src={logo} alt="" /></span>
               <button onClick={() => setIsOpen(false)}>
                 <svg
                   className="h-6 w-6 text-gray-800"
