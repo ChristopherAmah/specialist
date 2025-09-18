@@ -8,7 +8,7 @@ const BlogCategory = () => {
       <div className="flex flex-col md:flex-row gap-8 items-center">
         
         {/* Blog Image Section */}
-        <div className="relative w-full md:w-1/2 md:min-h-[300px] md:min-h-[380px]">
+        <div className="relative w-full md:w-1/2 md:min-h-[300px]">
           <img 
             src={blogfeature} 
             alt="People standing together" 
