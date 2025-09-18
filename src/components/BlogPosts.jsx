@@ -47,7 +47,7 @@ const LatestBlogPosts = () => {
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
           <div>
-            <span className="inline-block px-4 py-1 text-[18.51px] text-[#1B7FF2] border rounded-full mb-4">
+            <span className="inline-block px-4 py-1 md:text-[18.51px] text-[#1B7FF2] border rounded-full mb-4">
               We'd Love To Hear From You
             </span>
             <h2 className="text-4xl md:text-4xl font-medium text-[#000000] leading-tight">
