@@ -18,7 +18,7 @@ const App = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-snug md:leading-tight mb-6 sm:mb-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-snug md:leading-tight mb-6 sm:mb-8" style={{ fontFamily: "'Overused Grotesk'", fontWeight: "600" }}>
             Experience exceptional care at <br /> 
             Model Specialist Hospital for your Health Needs
           </h1>

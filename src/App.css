@@ -1,3 +1,7 @@
+body {
+  font-family: 'Overused Grotesk', sans-serif;
+}
+
 .infinite-scroll {
   width: 100%;
   overflow: hidden;

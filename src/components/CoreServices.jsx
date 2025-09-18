@@ -48,7 +48,7 @@ const App = () => {
           <span className="inline-block px-4 py-1 text-[14.75px] text-[#1B7FF2] bg-white border-[1.05px] border-indigo-600 rounded-full mb-8">
             What We Do
           </span>
-          <h2 className="text-4xl md:text-[48px] font-medium text-[#192431] tracking-tight leading-tight mb-[16px]">
+          <h2 className="text-4xl md:text-[48px] font-medium text-[#192431] tracking-tight leading-tight mb-[16px]" style={{ fontFamily: "'Overused Grotesk'", fontWeight: "500" }}>
             Our Core Medical Services
           </h2>
           <p className="text-[18px] text-[#2E2E27] lg:max-w-1/3 mx-auto">
