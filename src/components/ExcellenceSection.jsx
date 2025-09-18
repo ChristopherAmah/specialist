@@ -25,7 +25,7 @@ const App = () => {
     <div className="bg-white py-16 px-8 font-sans text-gray-900">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-6 md:mb-12">
-          <h2 className="text-3xl md:text-[48px] font-semibold md:font-bold text-[#192431] tracking-tight leading-tight" style={{ fontFamily: "'Overused Grotesk'", fontWeight: "400" }}>
+          <h2 className="text-3xl md:text-[48px] font-bold text-[#192431] tracking-tight leading-tight" style={{ fontFamily: "'Overused Grotesk'", fontWeight: "400" }}>
             Excellence by the Numbers
           </h2>
         </div>
